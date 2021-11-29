@@ -4,7 +4,7 @@ const PRODUCT_BUTTONS = document.querySelectorAll('.productButton');
 // Asynchrone function (awaits resolved promise) to recover API cameras data 
 (async () => {
     try {
-        const config = await loadConfig("../../Ecommerce-Webiste/frontend/config.json");
+        const config = await loadConfig("../../Ecommerce-Website/frontend/config.json");
         const response = await fetch(`${apiUrl}` + config.apiCategories.cameras);
         const data = await response.json();
         for (element of data) {
