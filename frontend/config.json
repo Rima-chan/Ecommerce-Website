@@ -1,6 +1,6 @@
 {
     "hostDev": "http://localhost:3000",
-    "hostProd": "https://orinoco-mb.herokuapp.com",
+    "hostProd": "https://orinoco-back-mb.herokuapp.com",
     "apiCategories" : {
         "cameras": "/api/cameras",
         "teddies": "/api/teddies",
