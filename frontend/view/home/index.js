@@ -4,7 +4,7 @@ const PRODUCT_BUTTONS = document.querySelectorAll('.productButton');
 // Asynchrone function (awaits resolved promise) to recover API cameras data 
 (async () => {
     try {
-        const config = await loadConfig();
+        const config = await loadConfig("../../frontend/config.json");
         const response = await fetch(`${apiUrl}` + config.apiCategories.cameras);
         const data = await response.json();
         for (element of data) {
@@ -24,7 +24,7 @@ function displayProduct(product) {
                                 <div class="card-body d-flex flex-column">
                                     <h2 class="card-title">${product.name}</h2>
                                     <p class="card-text flex-fill">${product.description}</p>
-                                    <a href="../product/product.html?id=${product.id}" class="btn btn-dark stretched-link justify-content-center mx-auto px-3 py-2 productButton">Voir ce produit</a>
+                                    <a href="./frontend/view/product/product.html?id=${product.id}" class="btn btn-dark stretched-link justify-content-center mx-auto px-3 py-2 productButton">Voir ce produit</a>
                                 </div>
                             </article>
                         </div>`;

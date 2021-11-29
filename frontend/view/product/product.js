@@ -6,7 +6,7 @@ let product = {};
 // Asynchrone function that recovers products infos by ID request 
 (async () => {
     try {
-        const config = await loadConfig();
+        const config = await loadConfig("../../config.json");
         const response = await fetch(`${apiUrl}` + config.apiCategories.cameras + `/${ID}`);
         const data = await response.json();
         product = new Product(data._id, data.name, data.price, data.description, data.imageUrl, data.lenses);
